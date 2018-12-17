@@ -156,9 +156,10 @@ ul.navlist {
         min-height: 3rem;
         /* border: 1px solid red; */
         display: grid;
-        justify-items: center;
+        justify-items: start;
         align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+        grid-template-columns: 400px 1fr 1fr;
     }
 
     .subheader-logo {
@@ -174,6 +175,7 @@ ul.navlist {
     }
 
     ul.subnav-list {
+        margin-left: 2rem;
         display: grid;
         grid-auto-flow: column;
         grid-template-columns: repeat(autofill, minmax(100px, 1fr));
@@ -181,15 +183,21 @@ ul.navlist {
         grid-gap: 1rem;
     }
 
+    .subnav-link {
+        font-weight: 600;
+        font-size: 15px;
+        color: black;
+    }
+
     .search {
     justify-self: flex-start;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 4fr 1fr;
-    background: #fff;
+    /* background: #fff; */
     top: 15px;
     width: 200px;
-    border: 1px solid #e0e0e0;
+    /* border: 1px solid #e0e0e0; */
     height: 2rem;
     border-radius: 3px;
 }
@@ -215,18 +223,18 @@ ul.navlist {
 }
 
 .hero-img {
-    max-width: 20%;
+    max-width: 40%;
     align-self: center;
 }
 
 .hero-search {
     justify-self: center;
-    display: flex;
+    display: grid;
     align-self: center;
     grid-template-columns: 6fr 1fr;
-    width: 200px;
+    width: 500px;
     
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 3px;
 }
 
