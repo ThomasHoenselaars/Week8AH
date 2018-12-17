@@ -33,6 +33,10 @@ a {
     text-decoration: none;
 }
 
+/* a:hover {
+    text-decoration: underline;
+} */
+
 .header {
     grid-area: header;
     /* position: fixed;
@@ -63,6 +67,7 @@ a {
     flex-flow: row nowrap;
     align-items: center;
     flex: 0 1 auto;
+    order: 0;
     /* justify-self: flex-start; */
 }
 
@@ -87,6 +92,7 @@ a {
     display: grid;
     align-items: center;
     flex: 1 1 auto;
+    order: 1;
     /* responsive */
     /* display: none; */
 }
@@ -123,6 +129,7 @@ ul.navlist {
     flex: 1 1 auto;
     margin-left: 2rem;
     margin-right: 2rem;
+    order: 2;
 }
 
 .searchterm-main {
@@ -141,7 +148,7 @@ ul.navlist {
     grid-auto-flow: column;
     grid-template-columns: 1fr auto;
     align-items: center;
- 
+    order: 3;
     flex: 0 0 auto;
    
 }
@@ -503,3 +510,48 @@ ul.section-list a::after {
     display: grid;
     justify-content: center;
 }
+
+
+ /* Responsive 1200px */
+ @media screen and (max-width: 1200px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .subheader {
+        flex-flow: column;
+    }
+
+    div.search {
+        width: 30rem;
+    }
+
+ }
+
+ /* Responsive 700px */
+ @media screen and (max-width: 700px) {
+    .subnav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subnav-item {
+        padding: 1rem;
+    }
+
+    div.search {
+        width: 20rem;
+    }
+
+   
+ }
+
+
+  /* Responsive 600px */
+  @media screen and (max-width: 600px) {
+
+        .order {
+            order: 1;
+        }
+  }
