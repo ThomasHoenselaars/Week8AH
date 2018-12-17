@@ -11,7 +11,7 @@ body {
     text-shadow: 1px 1px 1px rgba(0,0,0,.004);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5rem auto;
+    grid-template-rows: 4.2rem auto;
     grid-template-areas: 
         "header"
         "main"
@@ -35,11 +35,11 @@ a {
 
 .header {
     grid-area: header;
-    /* position: fixed; */
-    /* width: 100%; */
+    position: fixed;
+    width: 100%;
     font-size: 16px;
     font-weight: 300;
-    /* background: white; */
+    background: white;
     border-bottom: 1px solid #e0e0e0;
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -205,9 +205,9 @@ ul.navlist {
     /* background: #fff; */
     top: 15px;
     width: 200px;
-    /* border: 1px solid #e0e0e0; */
+    /* border: x solid #e0e0e0; */
     height: 2rem;
-    border-radius: 3px;
+    border-radius: .3rem;
 }
 
 .searchterm {
@@ -288,11 +288,28 @@ ul.navlist {
 
 /* SECTION A */
 
+
+
 .section-a {
     width: 100%;
     display: grid;
     justify-items: center;
-    margin-top: 1rem;
+    
+}
+.calltoaction {
+    background: #FFF7B6;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.cta {
+    font-weight: 200;
+}
+
+.ctalink {
+    color: black;
+    text-decoration: underline;
 }
 
 .section-title {
@@ -307,8 +324,34 @@ ul.navlist {
 .videos {
     width: 80%;
    display: grid;
+    grid-gap: 2rem;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
+.video-caption {
+    letter-spacing: .2rem;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+.section-button {
+    background: #6cbc88;
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    border-radius: .3rem;
+}
+
+.section-button::after {
+    content: "  >"
+}
+
 
 .footer {
     grid-area: footer;
