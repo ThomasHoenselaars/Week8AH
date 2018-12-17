@@ -9,17 +9,17 @@ body {
     font-size: 16px;
     font-family: greycliffCF-Regular,Sans-serif;
     text-shadow: 1px 1px 1px rgba(0,0,0,.004);
-    /* display: grid;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto);
     grid-template-areas: 
         "header"
         "main"
-        "footer"; */
+        "footer";
 }
 
 img {
-    max-width: 10%;
+    max-width: 100%;
 }
 
 ul {
@@ -35,9 +35,11 @@ a {
 
 .header {
     grid-area: header;
-    
+    /* position: fixed; */
+    /* width: 100%; */
     font-size: 16px;
     font-weight: 300;
+    /* background: white; */
     border-bottom: 1px solid #e0e0e0;
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -52,6 +54,7 @@ a {
     align-items: center;
     grid-gap: 2rem;
     padding: .3rem;
+    z-index: 9999;
 
 }
 
@@ -200,7 +203,72 @@ ul.navlist {
     border: none;
 }
 
-      
+
+.herosearch {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    min-height: 20rem;
+    background: url(https://static.ah.nl/binaries/content/gallery/allerhande/banner-images/header-home/2018/ah12/header_home_1600x430-week51-1.jpg/header_home_1600x430-week51-1.jpg/allerhande%3Adesktop);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-img {
+    max-width: 20%;
+    align-self: center;
+}
+
+.hero-search {
+    justify-self: center;
+    display: flex;
+    align-self: center;
+    grid-template-columns: 6fr 1fr;
+    width: 200px;
+    
+    height: 2rem;
+    border-radius: 3px;
+}
+
+
+.searchsubmit {
+    color: white;
+    font-size: 18px;
+    height: 2rem;
+}
+.magnifying-glass {
+    font-size: 2em;
+    display: inline-block;
+    width: 0.4em;
+    box-sizing: content-box;
+    height: 0.4em;
+    border: 0.1em solid white;
+    position: relative;
+    border-radius: 0.35em;
+  }
+.magnifying-glass:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -0.25em;
+    bottom: -0.1em;
+    border-width: 0;
+    background: white;
+    width: 0.35em;
+    height: 0.08em;
+    transform: rotate(45deg);
+  }
+
+.hero-link {
+    color: white;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.hero-link::after {
+    content: " >";
+}
+    
 
 .footer {
     grid-area: footer;
