@@ -76,6 +76,7 @@ a {
     min-height: 3rem;
     background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Albert_Heijn_Logo.svg/1200px-Albert_Heijn_Logo.svg.png);
     background-size: contain;
+    background-position: center;
     margin: 0.3rem;
     margin-right: 1rem;
 }
@@ -278,6 +279,7 @@ ul.navlist {
     
     min-height: 25rem;
     background: url(https://static.ah.nl/binaries/content/gallery/allerhande/banner-images/header-home/2018/ah12/header_home_1600x430-week51-1.jpg/header_home_1600x430-week51-1.jpg/allerhande%3Adesktop);
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -527,6 +529,11 @@ ul.section-list a::after {
         width: 30rem;
     }
 
+    .hero-img {
+        max-width: 50%;
+       
+    }
+
  }
 
  /* Responsive 700px */
@@ -542,6 +549,11 @@ ul.section-list a::after {
 
     div.search {
         width: 20rem;
+    }
+
+    .hero-img {
+        max-width: 80%;
+       
     }
 
    
