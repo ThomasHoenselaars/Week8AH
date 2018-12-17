@@ -157,6 +157,7 @@ ul.navlist {
 .searchbutton:hover {
     background: grey;
     cursor: pointer;
+    transition: .5s;
 }
 
 .order {
@@ -186,7 +187,6 @@ ul.navlist {
 .winkelmandje::before {
     position: absolute;
     left: 1rem;
-    
     background: black;
     width: 20px;
     height: 20px;
@@ -204,6 +204,13 @@ ul.navlist {
     justify-items: center;
     background-color: rgb(240, 239, 234);
 }
+
+.section-button:hover {
+        background: grey;
+        cursor: pointer;
+        transition: .5s;
+    }
+
 
    
     .subheader {
@@ -496,6 +503,12 @@ ul.section-list a::after {
     border-bottom: dashed 1px grey;
     min-width: 15rem;
     
+}
+
+.section-list-link:hover {
+    color: grey;
+    cursor: pointer;
+    transition: .2s;
 }
 
 /* SECTION C */
