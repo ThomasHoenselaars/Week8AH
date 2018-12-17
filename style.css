@@ -159,18 +159,20 @@ ul.navlist {
     margin-right: 1rem;
 }
 
-
+/* MAIN */
 .main {
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    background-color: rgb(240, 239, 234);
 }
 
    
     .subheader {
         background-color: rgb(240, 239, 234);
         padding: 1rem;
+        align-items: center;
         
         /* min-height: 3rem;
       
@@ -181,10 +183,10 @@ ul.navlist {
         grid-template-columns: 400px 1fr 1fr; */
 
 
-        width: 100%;
+        /* width: 100%; */
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: space-around;
         /* grid-gap: 2rem; */
         /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     }
@@ -194,6 +196,7 @@ ul.navlist {
         max-width: 100px;
         justify-self: flex-end;
         align-self: center;
+        /* margin-bottom: 1rem; */
         /* border: 1px solid red; */
         /* background: url(https://static.ah.nl/assets/allerhande/1.97.0/_ui/allerhande//assets/images/allerhande-print_657x128.png);
         background-size: contain;
@@ -278,21 +281,29 @@ ul.navlist {
 }
 
 .hero-search {
-    justify-self: center;
-    display: grid;
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
     align-self: center;
     grid-template-columns: 6fr 1fr;
-    width: 500px;
+    max-width: 500px;
     
     height: 2.5rem;
     border-radius: 3px;
+
+    /* border: 1px solid red; */
 }
 
+.searchterm {
+    flex: 1 0 auto;
+}
 
 .searchsubmit {
     color: white;
     font-size: 18px;
     height: 2rem;
+    flex: 0 1 auto;
 }
 .magnifying-glass {
     font-size: 2em;
@@ -336,6 +347,7 @@ ul.navlist {
     display: grid;
     justify-items: center;
     padding-bottom: 1rem;
+    background-color: white;
     
 }
 .calltoaction {
@@ -440,8 +452,54 @@ ul.section-list a::after {
     
 }
 
+/* SECTION C */
 
+.section-c {
+    width: 100%;
+    min-height: 25rem;
+    background: url(https://static.ah.nl/binaries/content/gallery/allerhande/banner-images/visual-highlights/2018/ah12/visual-highlight-groot-nieuw-wk50.jpg/visual-highlight-groot-nieuw-wk50.jpg/allerhande%3Adesktop);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    justify-content: center;
+
+}
+
+.screenwide-article {
+    background: rgba(255,255,255,.8);
+    padding: 1rem;
+    width: 350px;
+    height: 350px;
+    align-self: center;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    
+}
+
+.screenwide-article .section-button {
+    
+    align-content: center;
+    width: 150px;
+    
+}
+
+.widetitle {
+    font-size: 30px;
+    margin-bottom: -.5rem;
+}
+
+.widepara {
+    line-height: 1.5rem;
+    font-size: 20px;
+    font-weight: 200;
+}
 
 .footer {
     grid-area: footer;
+    background-color: rgb(240, 239, 234);
+    display: grid;
+    justify-content: center;
 }
