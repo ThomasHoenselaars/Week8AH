@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: greycliffCF-Regular,Sans-serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto);
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    border-bottom: 1px solid #e0e0e0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(224, 224, 224);
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    /* border: 1px solid red; */
+    grid-gap: 2rem;
+    padding: .3rem;
+
+}
+
+.sitename {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.logo {
+    min-width: 3rem;
+    min-height: 3rem;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Albert_Heijn_Logo.svg/1200px-Albert_Heijn_Logo.svg.png);
+    background-size: contain;
+    margin: 0.3rem;
+    margin-right: 1rem;
+}
+
+.loginmenu {
+    color: #3b9fe2;
+}
+
+ul.navlist {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-gap: 2rem;
+}
+
+.navlink {
+    color: #303030;
+    
+}
+
+
+.search-bar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 4fr 1fr;
+    background: #fff;
+    top: 15px;
+    width: 200px;
+    border: 1px solid #e0e0e0;
+    height: 2rem;
+    border-radius: 3px;
+}
+
+.searchterm-main {
+   border: none;
+}
+
+.searchbutton-main {
+
+}
+
+.order {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+}
+.bestellen {
+    font-weight: 400;
+    color: #3b9fe2;
+}
+
+.winkelmandje {
+    min-width: 3rem;
+    min-height: 3rem;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Albert_Heijn_Logo.svg/1200px-Albert_Heijn_Logo.svg.png);
+    background-size: contain;
+    margin: 0.3rem;
+    margin-right: 1rem;
+}
+
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
