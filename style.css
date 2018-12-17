@@ -442,7 +442,7 @@ ul.navlist {
 }
 
 .video-screenshot:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     
 }
 
@@ -605,6 +605,7 @@ ul.section-list a::after {
     .subnav-list {
         flex-direction: column;
         align-items: center;
+        display: none;
     }
 
     .subnav-item {
@@ -624,7 +625,7 @@ ul.section-list a::after {
  }
 
 
-  /* Responsive 600px */
+  /* Responsive 400px */
   @media screen and (max-width: 600px) {
 
         .order {
@@ -634,6 +635,16 @@ ul.section-list a::after {
         .subnav-list {
             flex-flow: column nowrap;
             align-items: center;
+            display: none;
+        }
+
+    
+        .main {
+            margin-top: 6rem;
+        }
+
+        .search {
+            display: none;
         }
 
   }
