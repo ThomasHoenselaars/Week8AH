@@ -49,8 +49,8 @@ button:focus {
 
 .header {
     grid-area: header;
-    /* position: fixed;
-    width: 100%; */
+    position: fixed;
+    width: 100%;
     font-size: 16px;
     font-weight: 300;
     background: white;
@@ -199,6 +199,7 @@ ul.navlist {
 /* MAIN */
 .main {
     grid-area: main;
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -433,12 +434,25 @@ ul.navlist {
    display: grid;
     grid-gap: 2rem;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   
+}
+
+.video-screenshot {
+    transition: transform .2s;
+}
+
+.video-screenshot:hover {
+    transform: scale(1.05);
+    
 }
 
 .video-caption {
     letter-spacing: .2rem;
     font-weight: 600;
     font-size: 16px;
+}
+.video a {
+    color: black;
 }
 
 figure {
@@ -623,3 +637,4 @@ ul.section-list a::after {
         }
 
   }
+
