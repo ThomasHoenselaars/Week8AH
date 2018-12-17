@@ -11,7 +11,7 @@ body {
     text-shadow: 1px 1px 1px rgba(0,0,0,.004);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto);
+    grid-template-rows: 5rem auto;
     grid-template-areas: 
         "header"
         "main"
@@ -78,6 +78,10 @@ a {
     color: #3b9fe2;
 }
 
+.loginmenu::after {
+    content: "  >";
+}
+
 .navbar {
     display: grid;
     align-items: center;
@@ -91,11 +95,15 @@ ul.navlist {
     grid-gap: 1rem;
 }
 
+
 .navlink {
     color: #303030;
     
 }
 
+.navlink-last::after {
+    content: "  >";
+}
 
 .search-bar {
     display: grid;
@@ -216,7 +224,8 @@ ul.navlist {
     display: grid;
     justify-items: center;
     width: 100%;
-    min-height: 20rem;
+    
+    min-height: 25rem;
     background: url(https://static.ah.nl/binaries/content/gallery/allerhande/banner-images/header-home/2018/ah12/header_home_1600x430-week51-1.jpg/header_home_1600x430-week51-1.jpg/allerhande%3Adesktop);
     background-size: cover;
     background-repeat: no-repeat;
@@ -276,7 +285,30 @@ ul.navlist {
 .hero-link::after {
     content: " >";
 }
-    
+
+/* SECTION A */
+
+.section-a {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    margin-top: 1rem;
+}
+
+.section-title {
+    color: #6cbc88;
+    letter-spacing: .2rem;
+}
+
+.section-subtitle {
+    font-weight: 100;   
+}
+
+.videos {
+    width: 80%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
 .footer {
     grid-area: footer;
