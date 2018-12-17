@@ -17,7 +17,7 @@ body {
         "main"
         "footer";
 }
-
+ /* ALGEMEEN */
 img {
     max-width: 100%;
 }
@@ -33,9 +33,19 @@ a {
     text-decoration: none;
 }
 
-/* a:hover {
-    text-decoration: underline;
-} */
+input[type="text"]
+{
+    font-size:18px;
+    font-weight: 200;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
 
 .header {
     grid-area: header;
@@ -144,6 +154,11 @@ ul.navlist {
     border: none;
 }
 
+.searchbutton:hover {
+    background: grey;
+    cursor: pointer;
+}
+
 .order {
     display: grid;
     grid-auto-flow: column;
@@ -159,12 +174,26 @@ ul.navlist {
 }
 
 .winkelmandje {
-    min-width: 3rem;
-    min-height: 3rem;
-    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Albert_Heijn_Logo.svg/1200px-Albert_Heijn_Logo.svg.png);
+    min-width: 2rem;
+    min-height: 2rem;
+    background: url(https://static.ah.nl/assets/allerhande/1.97.0/_ui/allerhande//css/img/fresh-nav-basket.svg);
     background-size: contain;
     margin: 0.3rem;
     margin-right: 1rem;
+    position: relative;
+}
+
+.winkelmandje::before {
+    position: absolute;
+    left: 1rem;
+    
+    background: black;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    content: "0";
+    border-radius: 50%;
+    color: White;
 }
 
 /* MAIN */
@@ -242,6 +271,10 @@ ul.navlist {
         font-weight: 600;
         font-size: 15px;
         color: black;
+    }
+
+    .subnav-link:hover {
+        text-decoration: underline;
     }
 
     li.subnav-item {
@@ -345,6 +378,10 @@ ul.navlist {
 
 .hero-link::after {
     content: " >";
+}
+
+.hero-link:hover {
+    text-decoration: underline;
 }
 
 /* SECTION A */
@@ -566,4 +603,10 @@ ul.section-list a::after {
         .order {
             order: 1;
         }
+
+        .subnav-list {
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
   }
