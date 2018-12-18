@@ -11,7 +11,7 @@ body {
     text-shadow: 1px 1px 1px rgba(0,0,0,.004);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: minmax(68px, auto) 1fr auto;
     grid-template-areas: 
         "header"
         "main"
@@ -197,9 +197,13 @@ ul.navlist {
 }
 
 /* MAIN */
+
+
+
+
 .main {
     grid-area: main;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -638,9 +642,8 @@ ul.section-list a::after {
             display: none;
         }
 
-    
         .main {
-            margin-top: 6rem;
+            margin-top: 2rem;
         }
 
         .search {
