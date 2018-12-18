@@ -47,6 +47,10 @@ button:focus {
     outline: none;
 }
 
+.hamburger {
+    display: none;
+}
+
 .header {
     grid-area: header;
     position: fixed;
@@ -637,7 +641,7 @@ ul.section-list a::after {
         }
 
         .subnav-list {
-            flex-flow: column nowrap;
+            flex-flow: row wrap;
             align-items: center;
             display: none;
         }
@@ -646,8 +650,34 @@ ul.section-list a::after {
             margin-top: 2rem;
         }
 
+        .subheader {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-auto-flow: column;
+            
+            /* flex-flow: row nowrap;
+            justify-content: flex-end; */
+        }
+
+        .hamburger {
+            display: block;
+            color: black;
+            font-weight: 100;
+            
+        }
+
+        .hamburger::after {
+            content: ">"
+        }
+
         .search {
             display: none;
+        }
+
+        .subnav-list.subnav-open {
+            /* display: grid; */
+            grid-auto-flow: row;
+
         }
 
   }
